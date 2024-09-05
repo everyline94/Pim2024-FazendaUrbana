@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Pim2024-FazendaUrbana.props" />
+</Project>

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Pim2024-FazendaUrbana/1.0.0": {
+        "runtime": {
+          "Pim2024-FazendaUrbana.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pim2024-FazendaUrbana/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
