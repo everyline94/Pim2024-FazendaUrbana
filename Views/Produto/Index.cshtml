@@ -1,0 +1,35 @@
+@model IEnumerable<Pim2024_FazendaUrbana.Models.Produto>
+
+<h1>Lista de Produtos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Id</td>
+                <td>@produto.Nome</td>
+                <td>@produto.Descricao</td>
+                <td>@produto.Preco</td>
+                <td>@produto.Quantidade</td>
+                <td>
+                    <a href="@Url.Action("Detalhes", "Produto", new { id = produto.Id })" class="btn btn-info">Detalhes</a>
+                    <a href="@Url.Action("Editar", "Produto", new { id = produto.Id })" class="btn btn-warning">Editar</a>
+                    <a href="@Url.Action("Deletar", "Produto", new { id = produto.Id })" class="btn btn-danger">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Criar", "Produto")" class="btn btn-success">Adicionar Produto</a>
