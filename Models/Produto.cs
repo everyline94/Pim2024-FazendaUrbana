@@ -2,10 +2,21 @@ namespace Pim2024_FazendaUrbana.Models
 {
     public class Produto
     {
-        public int Id { get; set; } // Identificador único
-        public string? Nome { get; set; } // Nome do produto, agora anulável
-        public string? Descricao { get; set; } // Descrição do produto, agora anulável
-        public decimal Preco { get; set; } // Preço do produto
-        public int Quantidade { get; set; } // Quantidade em estoque
+        public int Id { get; set; }
+        public string? Nome { get; set; }
+        public string? Descricao { get; set; }
+        public decimal Preco { get; set; }
+        public int Quantidade { get; set; } 
+        public Funcionario? Fornecedor { get; set; } 
+
+        public void AtualizarEstoque(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
+
+        public void DefinirPreco(decimal novoPreco)
+        {
+            Preco = novoPreco;
+        }
     }
 }
